@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>E-Shope.Com :: Contact us</title>
+        <link href="./assets/style/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <?php require_once('header.php'); ?>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+<center><h2><font color="white"><u> Project Team Members</u></font></h2>
+<table border=1 width=60%>
+	<tr>
+		<td align="center"><img src="./assets/images/vish.jpg" height=150px width=200px></td>
+	</tr>
+	<tr>
+		<td align="center"><font color="white"> Mr. Vishven Solanki<br>Web Developer<br>Android Developer<br>Professional Photographer At </font><a href="https://www.facebook.com/pages/The-Focus/529151937184218?ref=bookmarks"><font color="blue">THE FOCUS</a><br>
+	</tr>
+</table>
+</center>
+
+
+
+
+<font color="white" size="5"><u><center>Contact us</center></u></font><br><br>
+<table border=0 width=100%>
+<tr>
+<td align ="center">
+<center><img src="./assets/images/map1.jpg"><center>
+</tr>
+<tr>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align=center>
+<font size=4 color="#FFFFFF">
+<br>
+<br>E Shop<br>Near Himalaya Mall,<br>Drive in Road,<br>Ahmedabad 380007<br><br>
+
+</font>
+</td>
+
+</body>
+</html>

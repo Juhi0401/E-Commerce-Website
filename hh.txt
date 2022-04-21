@@ -1,0 +1,14 @@
+
+www.snapdeal.com	---- 
+www.flipkart.com	
+www.jabong.com
+www.yepme.com
+
+->X	Wish list	  (may be)
+	Shopping Cart	  (compalsary [Update]) 
+	Price  	(sorting)
+	category 	(company sorting) 
+	quantity           	[Maintain]  
+-> X	Admin Interface	  ([Update])
+	Invoice Generate 	([update])
+	

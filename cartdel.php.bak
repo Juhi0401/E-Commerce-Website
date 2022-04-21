@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>E-Shope.Com :: Order Payment</title>
+        <link href="./assets/style/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+        <?php require_once('header.php'); 
+		include("config.php");
+		$cname=$_POST['cname'];
+		$cadd=$_POST['caddress'];
+		$cnum=$_POST['cnumber'];
+		$bill=$_POST['total'];
+
+
+		$db = getDatabase();
+		$addquery="insert into itempurchase values('$cname','$cadd','$cnum','$bill')";
+		mysql_query($addquery,$db);
+		
+	?>	
+	<font color=white>
+<h2>Thank You <?php echo $_POST['cname'];?></h2>
+
+<h2>Total Price <?php echo $_POST['total'];?></h2>
+
+<h2>Your Contact No :  <?php echo $_POST['cnumber'];?></h2>
+
+<h2>Your Product Will Delivered To Your Shipping Address by 5 to 6 Working Days </h2>
+<br>
+<h2>Your Address <?php echo $_POST['caddress'];?></h2>
+<br>
+<h2>Thank You FOR SHOPPING WITH US</h1>	
+
+<?php
+$q="INSERT INTO order VALUES('$cname','$cadd',$cnum,$bill)";
+echo $q;
+mysql_query($q);
+?>
+	
+	<center><br><br><table style="margin-left:50px; font-size:26px" border="1" cellspacing="0" cellpadding="5">
+	<?php
+	     $db = getDatabase();
+		$s="select * from cart";
+		$s1=mysql_query($s,$db);
+	
+	?>
+	<tr>
+		
+		<td>
+			<font color=white>Product Name
+		</td>
+		<td>
+			<font color=white>Price
+		</td>
+		<td>
+			<font color=white>Quantity
+		</td>
+		<td>
+			<font color=white>Total
+		</td>
+	</tr>
+	<?php
+	$tot=0;
+		while($s2=mysql_fetch_object($s1))
+		{ 
+			
+			$pname = $s2->name;
+			$nprice = $s2->new_price;
+			$nqty = $s2->qty;
+			
+			$gtot=$nqty*$s2->new_price;
+			$tot=$tot+$gtot;
+	?>
+		<tr>
+			
+			<td>
+				<font color=white><?php echo $pname ?>
+			</td>
+			<td>
+				<font color=white>Rs <?php echo $nprice ?>/-
+			</td>
+			<td>
+				<font color=white> <?php echo $nqty ?></font>
+			</td>
+			<td>
+				<font color=white>RS <?php echo $gtot ?></font>
+			</td>
+			
+		</tr>
+		<br>
+
+	<?php
+			
+		}
+		
+	?>
+
+
+	<?php 
+	echo "<meta http-equiv='refresh' content='7;url=main.php'>";
+	?>
+</table>
+</body>
